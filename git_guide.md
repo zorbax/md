@@ -5,12 +5,12 @@ git add .
 git status
 git commit -m "Commit message"
 git remote add origin https://github.com/zorbax/cc.git
-git push origin master
+git push -u origin master
 ```
 
 ###### Change the URI (URL) for a remote Git repository
 ```
-git remote set-url origin git://github.com/zorbax/scripts.git
+git remote set-url origin https://github.com/zorbax/scripts.git
 ```
 
 ###### Set git to use the credential memory cache
@@ -21,11 +21,15 @@ git config --global credential.helper cache
 ```
 git config --global credential.helper 'cache --timeout=3600'
 ```
-###### Update local repository to the newest commit 
+###### Update local repository to the newest commit
 ```
 git pull
 ```
-
+##### Running Jekyll in localhost
+```
+# bundle update #Update site
+bundle exec jekyll serve
+```
 ###### CC
 
 * Basic
@@ -66,4 +70,3 @@ git pull
 |`git fetch`| Fetches work from the remote into the local copy.|
 |`git merge origin/master`| Merges origin/master into your local branch.|
 |`git push origin <branch_name>`| Pushes a local branch to the origin remote.|
-
