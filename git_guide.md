@@ -9,19 +9,23 @@ git push -u origin master
 ```
 
 ###### Change the URI (URL) for a remote Git repository
+
 ```
 git remote set-url origin https://github.com/zorbax/scripts.git
 ```
 
 ###### Set git to use the credential memory cache
+
 ```
 git config --global credential.helper cache
 ```
 ###### Set the cache to timeout after 1 hour (setting is in seconds)
+
 ```
 git config --global credential.helper 'cache --timeout=3600'
 ```
 ###### Update local repository to the newest commit
+
 ```
 git pull
 ```
@@ -30,6 +34,23 @@ git pull
 # bundle update #Update site
 bundle exec jekyll serve
 ```
+
+##### Delete local branch
+
+```
+git branch -d gh-pages
+```
+##### Delete remote branch
+```
+git push origin :gh-pages
+```
+##### Push local master *into* gh-pages branch on github
+```i
+git checkout gh-pages
+git merge master
+git push -u origin gh-pages
+```
+
 ###### CC
 
 * Basic
