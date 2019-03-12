@@ -95,13 +95,26 @@ git push -u origin gh-pages
 
 ### Fetch all changes
 
+```
 git fetch --all
+```
 
 ### Reset the master
 
+```
 git reset --hard origin/master
+```
 
 ### Pull
 
+```
 git pull
+```
 
+### Global gitignore
+
+```
+git config --global core.excludesfile '~/.gitignore'
+
+echo '.ipynb_checkpoints' >> ~/.gitignore
+```
