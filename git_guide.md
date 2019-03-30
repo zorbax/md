@@ -118,3 +118,8 @@ git config --global core.excludesfile '~/.gitignore'
 
 echo '.ipynb_checkpoints' >> ~/.gitignore
 ```
+
+### Git commit to the past
+```
+git commit --amend --no-edit --date="Thu Mar 21 20:00:00 2019 -0600"
+```
