@@ -123,3 +123,11 @@ echo '.ipynb_checkpoints' >> ~/.gitignore
 ```
 git commit --amend --no-edit --date="Thu Mar 21 20:00:00 2019 -0600"
 ```
+
+### Move existing, uncommitted work to a new branch in Git
+
+```
+git checkout -b <new-branch>
+git add <files>
+git commit -m "<Brief description of this commit>"
+```
