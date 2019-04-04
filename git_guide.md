@@ -139,3 +139,11 @@ git rev-list --objects --all | grep -f <(git verify-pack -v .git/objects/pack/*.
 ```
 git reflog expire --expire=now --all && git gc --prune=now --aggressive
 ```
+
+
+#### Merge two repositories
+cd project-b
+git remote add project-a http://github.com/zorbax/project-a.git
+git fetch project-a --tags
+git merge --allow-unrelated-histories project-a/master
+git remote remove project-a
