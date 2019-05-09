@@ -119,3 +119,10 @@ docker rm $(docker stop $(docker ps -a -q --filter ancestor=<image-name> --forma
 ```
 docker rmi -f $(docker images -f "dangling=true" -q)
 ```
+
+# Push docker to Dockerhub
+```
+docker login --username=atgenomics --email=atgenomics@gmail.com
+docker tag qiime2 atgenomics/qiime2
+docker push atgenomics/qiime2
+```
