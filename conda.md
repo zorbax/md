@@ -11,11 +11,10 @@ conda update conda
 conda update --all
 
 ### Remove env
-conda-env remove -n qiime
+conda env remove -n qiime
 
 ### Upgrade Conda
 conda update -n base conda
-
 
 ### Create a env in a specific channel with a particular python version with specific version package
 conda create -y -n qiime python=2.7 qiime matplotlib==1.4.3 numpy==1.10.4 h5py==2.6.0 mock nose -c bioconda
