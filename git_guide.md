@@ -45,7 +45,7 @@ git branch -d gh-pages
 git push origin :gh-pages
 ```
 ##### Push local master *into* gh-pages branch on github
-```i
+```
 git checkout gh-pages
 git merge master
 git push -u origin gh-pages
