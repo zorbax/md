@@ -39,6 +39,5 @@ curl http://data.biostarhandbook.com/install/conda.txt | xargs conda install -y
 conda create -y -n data python=3
 conda install -y numpy pandas scikit-learn matplotlib seaborn ipython-notebook
 
-### Qiime
-
-conda create -y -n qiime qiime matplotlib=1.4.3 numpy==1.10.4 h5py==2.6.0 mock nose -c bioconda
+### Export an environment
+conda env export -n course-env -f course-env.yml
