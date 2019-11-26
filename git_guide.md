@@ -135,15 +135,20 @@ git commit -m "<Brief description of this commit>"
 ```
 git rev-list --objects --all | grep -f <(git verify-pack -v .git/objects/pack/*.idx| sort -k 3 -n | cut -f 1 -d " " | tail -15)
 ```
-###
-```
-git reflog expire --expire=now --all && git gc --prune=now --aggressive
-```
-
-
 #### Merge two repositories
+```
 cd project-b
 git remote add project-a http://github.com/zorbax/project-a.git
 git fetch project-a --tags
 git merge --allow-unrelated-histories project-a/master
 git remote remove project-a
+```
+
+#### Remove a large files from commit history
+```
+git clone --mirror git://example.com/some-big-repo.git
+bfg --strip-blobs-bigger-than 4M some-big-repo.git
+cd some-big-repo.git
+git reflog expire --expire=now --all && git gc --prune=now --aggressive
+git push
+```
