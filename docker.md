@@ -117,7 +117,7 @@ docker rm $(docker stop $(docker ps -a -q --filter ancestor=<image-name> --forma
 ```
 ### Remove <none> images after building
 ```
-docker rmi -f $(docker images -f "dangling=true" -q)
+docker rmi -f $(docker images -f "dangling=true" -q --no-trunc) 2>/dev/null
 ```
 
 # Push docker to Dockerhub
