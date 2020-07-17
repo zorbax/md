@@ -41,3 +41,8 @@ conda install -y numpy pandas scikit-learn matplotlib seaborn ipython-notebook
 
 ### Export an environment
 conda env export -n course-env -f course-env.yml
+
+
+# conda create --name environment_name python=3.6
+# conda env export > environment.yml
+# conda env create -f environment.yml
