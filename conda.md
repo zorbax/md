@@ -46,3 +46,6 @@ conda env export -n course-env -f course-env.yml
 # conda create --name environment_name python=3.6
 # conda env export > environment.yml
 # conda env create -f environment.yml
+
+# remove (base) from prompt
+conda config --set changeps1 False
