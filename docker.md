@@ -122,7 +122,7 @@ docker rmi -f $(docker images -f "dangling=true" -q --no-trunc) 2>/dev/null
 
 # Push docker to Dockerhub
 ```
-docker login --username=atgenomics --email=atgenomics[at].com
+docker login -u atgenomics
 docker tag qiime2 atgenomics/qiime2
 docker push atgenomics/qiime2
 ```
