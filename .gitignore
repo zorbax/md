@@ -1,1 +1,9 @@
 .idea
+.Rhistory
+.DS_Store*
+.Spotlight-V100
+.ipynb_checkpoints
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
