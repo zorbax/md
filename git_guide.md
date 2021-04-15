@@ -1,11 +1,12 @@
 ###### Shortcuts
 ```
+echo "Something" >> README.md
 git init
-git add .
-git status
+git add README.md
 git commit -m "Commit message"
+git branch -M main
 git remote add origin https://github.com/zorbax/cc.git
-git push -u origin master
+git push -u origin main
 ```
 
 ###### Change the URI (URL) for a remote Git repository
@@ -150,5 +151,17 @@ git clone --mirror git://example.com/some-big-repo.git
 bfg --strip-blobs-bigger-than 4M some-big-repo.git
 cd some-big-repo.git
 git reflog expire --expire=now --all && git gc --prune=now --aggressive
+git push
+```
+
+#### Update forked repo
+```
+git clone https://github.com/zorbax/forkedrepo.git
+cd forkedrepo/
+git remote add upstream https://github.com/user/originalrepo
+git fetch upstream
+git checkout master
+git rebase upstream/master
+git status
 git push
 ```
