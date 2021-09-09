@@ -165,3 +165,8 @@ git rebase upstream/master
 git status
 git push
 ```
+
+#### Two factor authentication
+````
+git config --global credential.helper cache
+```
