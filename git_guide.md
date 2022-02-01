@@ -132,10 +132,12 @@ git checkout -b <new-branch>
 git add <files>
 git commit -m "<Brief description of this commit>"
 ```
+
 ### Shows the SHA value for the top files
 ```
 git rev-list --objects --all | grep -f <(git verify-pack -v .git/objects/pack/*.idx| sort -k 3 -n | cut -f 1 -d " " | tail -15)
 ```
+
 #### Merge two repositories
 ```
 cd project-b
@@ -167,6 +169,6 @@ git push
 ```
 
 #### Two factor authentication
-````
+```
 git config --global credential.helper cache
 ```
