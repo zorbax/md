@@ -125,6 +125,10 @@ echo '.ipynb_checkpoints' >> ~/.gitignore
 git commit --amend --no-edit --date="Thu Mar 21 20:00:00 2019 -0600"
 ```
 
+### Git commit empty
+```
+git commit --allow-empty -m "Empty"
+```
 ### Move existing, uncommitted work to a new branch in Git
 
 ```
